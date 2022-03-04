@@ -1,5 +1,3 @@
-// Still in progress
-
 #include <stdio.h>
 
 int main(void) {
@@ -12,16 +10,65 @@ int main(void) {
   scanf("%d /%d /%d", &month, &day, &year);
 
   // Print the month
-  
+  switch (month) {
+    case 1:
+      printf("January ");
+      break;
+    case 2:
+      printf("February ");
+      break;
+    case 3:
+      printf("March ");
+      break;
+    case 4:
+      printf("April ");
+      break;
+    case 5:
+      printf("May ");
+      break;
+    case 6:
+      printf("June ");
+      break;
+    case 7:
+      printf("July ");
+      break;
+    case 8:
+      printf("August ");
+      break;
+    case 9:
+      printf("September ");
+      break;
+    case 10:
+      printf("October ");
+      break;
+    case 11:
+      printf("November ");
+      break;
+    default:
+      printf("December ");
+  }
 
   // Print the day
-
+  printf ("%d", day);
 
   // Print the suffix for a given day
-  
+  switch(day) {
+    case 2: case 22:
+      printf ("nd, ");
+      break;
+    case 1: 
+      printf ("st, ");
+      break;
+    case 3: case 23:
+      printf ("rd, ");
+      break;
+    default:
+      printf("th, ");
+  }
 
   // Print the year
-  
+  printf("%d", year);
+  printf(".\n");
   
   return 0;
 }
